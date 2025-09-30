@@ -12,16 +12,19 @@ The city is represented as an $n \times m$ grid of squares.
 
 ## Movement Rules
 - Mom can move **up, down, left, or right** to a neighboring cell (no diagonal moves).  
-- She may visit the **same cell multiple times**, but **at most 1000 times**.  
-- Each time she steps into a cell, she pays a cost:  
-  - If her total number of steps so far is **even**, she pays the cell’s **even cost**.  
-  - If her total number of steps so far is **odd**, she pays the cell’s **odd cost**.  
-- The starting cell also requires paying its cost based on parity (step $0$ is considered even).  
+- Each move costs exactly **1**.  
+- However, she can only step into a cell $(i,j)$ if the following condition holds:
+
+\[
+(\text{Manhattan distance from } (1,1) \text{ to } (i,j)) \bmod 100 = (\text{number of steps taken so far}) \bmod 100
+\]
+
+- The starting position $(1,1)$ is always valid.  
 
 ---
 
 ## Task
-Find the **minimum total cost** required for Mom to reach the child’s cell.  
+Find the **minimum number of moves** required for Mom to reach the child’s cell.  
 If it is impossible, print `-1`.  
 
 ---
@@ -31,16 +34,9 @@ If it is impossible, print `-1`.
 - The second line contains a single uppercase character $x$ — the clan Mom belongs to.  
 - The next $n$ lines each contain a string of $m$ uppercase letters — the city grid.  
   - The grid contains exactly one character `C`.  
-- Then $n$ lines follow, each containing $m$ integers: the **even costs** for each cell.  
-- Then another $n$ lines follow, each containing $m$ integers: the **odd costs** for each cell.  
 
 ---
 
 ## Output
-Print a single integer — the minimum cost to reach the child’s cell.  
+Print a single integer — the minimum number of moves needed to reach the child’s cell.  
 If it is impossible, print `-1`.  
-
----
-
-## Example 1
-**Input**  
