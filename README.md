@@ -1,30 +1,33 @@
 # Problem: Grid Path with Parity Costs
 
-You are given an $n \times m$ grid. Each cell contains an uppercase letter representing its clan.  
-You are also given a character $x$ representing Mom’s clan. Mom starts at the top-left cell $(1,1)$ and can only walk on cells belonging to her clan.  
-There is exactly one cell marked with the character `C`, representing the child’s position.
+Mom is searching for her child in a city represented as a grid.  
+Each cell of the grid belongs to a clan, denoted by an uppercase letter.  
+Mom belongs to a specific clan and can only walk on cells of her clan.  
 
-Mom wants to reach the child with the **minimum total cost**.
+There is exactly one cell marked with the letter `C`, which represents the child's position.  
+Mom starts at the top-left cell `(1,1)` and wants to reach the child with the **minimum total cost**.
 
 ---
 
 ## Movement Rules
-- From a cell $(i,j)$, Mom can move **up, down, left, or right** (no diagonal moves).  
-- The $k$-th move (0-indexed) has a **parity**:
-  - If $k$ is even, entering cell $(i,j)$ costs its **even cost**.
-  - If $k$ is odd, entering cell $(i,j)$ costs its **odd cost**.
-- Let $d(i,j)$ be the Manhattan distance from $(1,1)$ to $(i,j)$.  
-- Mom can move into a cell $(i,j)$ on step $k$ **if and only if**:
+1. Mom can move **up, down, left, or right** (no diagonal moves).  
+2. The $k$-th step (0-indexed) has a **parity**:
+   - If $k$ is even, entering cell $(i,j)$ costs its **even cost**.  
+   - If $k$ is odd, entering cell $(i,j)$ costs its **odd cost**.  
+3. Let $d(i,j)$ be the Manhattan distance from `(1,1)` to `(i,j)`.  
+   - Mom can move into cell $(i,j)$ at step $k$ **only if**:
 
 \[
 d(i,j) \bmod 100 = (k \bmod 100)
 \]
 
+4. Visiting the **same cell multiple times is allowed**, but **each visit requires paying its cost again** according to the parity of that step.
+
 ---
 
 ## Task
-Determine the minimum cost needed for Mom to reach the child.  
-If it is impossible, output `-1`.
+Determine the minimum cost Mom must pay to reach the child.  
+If it is impossible, print `-1`.
 
 ---
 
