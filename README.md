@@ -16,7 +16,7 @@ Your task is to find the **minimum total cost** Mom must pay to reach **any** ce
 ---
 
 ## Input
-- The first line contains two integers $n, m$ ($2 \leq n, m \leq 1000$) — the number of rows and columns in the grid.
+- The first line contains two integers $n, m$ ($2 \leq n, m \leq 100$) — the number of rows and columns in the grid.
 - The second line contains a single character $x$ — the clan Mom belongs to.
 - The next $n$ lines each contain a string of $m$ uppercase letters, representing the grid. At least one cell will contain the letter `C`, denoting the child.
 
