@@ -23,8 +23,6 @@ Your task is to find the minimum total cost required to reach cell `N` from cell
 The first line contains an integer `T` — the number of test cases.  
 Each of the next `T` lines contains a single integer `N` (`2 ≤ N ≤ 10^7`).  
 
-It is guaranteed that the sum of `N` over all test cases does not exceed `10^7`.
-
 ---
 
 ## Output
