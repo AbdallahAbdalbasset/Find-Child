@@ -37,17 +37,12 @@ If it is impossible, print `-1`.
 
 ### Input
 3
-
 10
-
 9
-
 18
 
 ### Output
 21
-
 -1
-
 -1
 
