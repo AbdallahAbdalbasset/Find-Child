@@ -26,3 +26,20 @@ Your task is to find the **minimum total cost** required to reach cell **N** fro
 ## Output
 - Print the minimum cost to reach cell `N`.  
 - If it is impossible, print `-1`.
+
+---
+Examples
+### Input
+10
+### Output
+21
+
+### Input
+9
+### Output
+-1
+
+### Input
+18
+### Output
+-1
