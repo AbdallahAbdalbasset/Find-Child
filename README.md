@@ -36,3 +36,13 @@ If it is impossible, print `-1`.
 ## Examples
 
 ### Input
+3
+10
+9
+18
+
+### Output
+21
+-1
+-1
+
