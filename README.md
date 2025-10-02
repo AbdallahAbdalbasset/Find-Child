@@ -22,7 +22,7 @@ Your task is to find the **minimum total cost** required to reach cell `N` from 
 ---
 
 ## Input
-The first line contains an integer `T` — the number of test cases.  
+The first line contains an integer `T` (`1 ≤ T ≤ 5⋅10^6`)— the number of test cases.  
 Each of the next `T` lines contains a single integer `N` (`2 ≤ N ≤ 5⋅10^7`).  
 
 ---
